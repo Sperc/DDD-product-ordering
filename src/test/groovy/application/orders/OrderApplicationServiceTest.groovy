@@ -1,10 +1,6 @@
 package application.orders
 
-import application.orders.dto.AddDeliveryAddressRequest
-import application.orders.dto.AddProductRequest
-import application.orders.dto.CalculateDiscountRequest
-import application.orders.dto.CompleteOrderProcessRequest
-import application.orders.dto.CreateOrderRequest
+import application.orders.dto.*
 import domain.orders.*
 import domain.shared.OrderException
 import domain.shared.UuidGenerator
@@ -47,7 +43,7 @@ class OrderApplicationServiceTest extends Specification {
 
     def "should throw exception when try to add Product to Order with not exists"() {
         given:
-        def request = new AddProductRequest("2", "productId", "purchaserId")
+        def request = new AddProductRequest("productId", "purchaserId")
         def product = new ProductContext(ProductId.of(request.productId), 1L)
         def purchaser = new Purchaser(PurchaserId.of(request.purchaserId),
                                       "email@test.pl",
@@ -58,7 +54,7 @@ class OrderApplicationServiceTest extends Specification {
         orderRepository.database.put(order.getId().value, order)
 
         when:
-        orderService.addProduct(request)
+        orderService.addProduct(request, "15")
         then:
         1 * purchaserSupplier.supply(request.purchaserId) >> Optional.of(purchaser)
         1 * productSupplier.supply(request.productId) >> Optional.of(product)
@@ -67,7 +63,7 @@ class OrderApplicationServiceTest extends Specification {
 
     def "should add product to Order"() {
         given:
-        def request = new AddProductRequest("1", "productId", "purchaserId")
+        def request = new AddProductRequest("productId", "purchaserId")
         def product = new ProductContext(ProductId.of(request.productId), 1L)
         def purchaser = new Purchaser(PurchaserId.of(request.purchaserId),
                                       "email@test.pl",
@@ -78,7 +74,7 @@ class OrderApplicationServiceTest extends Specification {
         orderRepository.database.put(order.getId().value, order)
 
         when:
-        orderService.addProduct(request)
+        orderService.addProduct(request,"1")
         then:
         'mock'
         1 * purchaserSupplier.supply(request.purchaserId) >> Optional.of(purchaser)
@@ -93,7 +89,7 @@ class OrderApplicationServiceTest extends Specification {
     @Unroll("For user type: #userType")
     def "should calculate discount"() {
         given:
-        def request = new CalculateDiscountRequest("discountCode", "1", "purchaserId")
+        def request = new CalculateDiscountRequest("discountCode", "purchaserId")
         def product = new ProductContext(ProductId.of("1"), 100L)
         def purchaser = new Purchaser(PurchaserId.of(request.purchaserId),
                                       "email@test.pl",
@@ -104,7 +100,7 @@ class OrderApplicationServiceTest extends Specification {
         orderRepository.database.put(order.getId().value, order)
 
         when:
-        orderService.calculate(request)
+        orderService.calculate(request, "1")
         then:
         'mock'
         1 * purchaserSupplier.supply(request.purchaserId) >> Optional.of(purchaser)
@@ -120,7 +116,7 @@ class OrderApplicationServiceTest extends Specification {
 
     def "AddDeliveryAddress"() {
         given:
-        def request = new AddDeliveryAddressRequest("1", "1", "streetName", "Lublin", "firstName", "lastName")
+        def request = new AddDeliveryAddressRequest("1", "streetName", "Lublin", "firstName", "lastName")
         def purchaser = new Purchaser(PurchaserId.of(request.purchaserId),
                                       "email@test.pl",
                                       Purchaser.Type.ORDINARY)
@@ -130,7 +126,7 @@ class OrderApplicationServiceTest extends Specification {
         orderRepository.database.put(order.getId().value, order)
 
         when:
-        orderService.addDeliveryAddress(request)
+        orderService.addDeliveryAddress(request, "1")
         then:
         'mock'
         1 * purchaserSupplier.supply(request.purchaserId) >> Optional.of(purchaser)
@@ -145,7 +141,7 @@ class OrderApplicationServiceTest extends Specification {
 
     def "CompleteOrderProcess"() {
         given:
-        def request = new CompleteOrderProcessRequest("1", "1")
+        def request = new CompleteOrderProcessRequest("1")
         def purchaser = new Purchaser(PurchaserId.of(request.purchaserId),
                                       "email@test.pl",
                                       Purchaser.Type.ORDINARY)
@@ -155,7 +151,7 @@ class OrderApplicationServiceTest extends Specification {
         orderRepository.database.put(order.getId().value, order)
 
         when:
-        orderService.completeOrderProcess(request)
+        orderService.completeOrderProcess(request, "1")
         then:
         'mock'
         1 * purchaserSupplier.supply(request.purchaserId) >> Optional.of(purchaser)

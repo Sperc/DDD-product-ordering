@@ -21,20 +21,20 @@ public class OrderApplicationService {
         return new CreateOrderResponse(order.getOrderId());
     }
 
-    public void addProduct(AddProductRequest request) {
+    public void addProduct(AddProductRequest request, String orderId) {
         final ProductContext productContext = getProductContext(request.getProductId());
         final Purchaser purchaser = getPurchaser(request.getPurchaserId());
-        ordersDomainService.addProduct(new AddProductCommand(OrderId.of(request.getOrderId()), productContext, purchaser));
+        ordersDomainService.addProduct(new AddProductCommand(OrderId.of(orderId), productContext, purchaser));
     }
 
-    public void calculate(CalculateDiscountRequest request) {
+    public void calculate(CalculateDiscountRequest request, String orderId) {
         final Purchaser purchaser = getPurchaser(request.getPurchaserId());
-        ordersDomainService.calculateDiscount(new CalculateDiscountCommand(new DiscountCode(request.getCode()), purchaser, OrderId.of(request.getOrderId())));
+        ordersDomainService.calculateDiscount(new CalculateDiscountCommand(new DiscountCode(request.getCode()), purchaser, OrderId.of(orderId)));
     }
 
-    public void addDeliveryAddress(AddDeliveryAddressRequest request) {
+    public void addDeliveryAddress(AddDeliveryAddressRequest request, String orderId) {
         final Purchaser purchaser = getPurchaser(request.getPurchaserId());
-        ordersDomainService.addDeliveryAddress(new AddDeliveryInformationCommand(OrderId.of(request.getOrderId()),
+        ordersDomainService.addDeliveryAddress(new AddDeliveryInformationCommand(OrderId.of(orderId),
                                                                                  new DeliveryInformation(request.getStreetName(),
                                                                                                          request.getCity(),
                                                                                                          request.getFirstName(),
@@ -43,9 +43,9 @@ public class OrderApplicationService {
         ));
     }
 
-    public void completeOrderProcess(CompleteOrderProcessRequest request) {
+    public void completeOrderProcess(CompleteOrderProcessRequest request, String orderId) {
         final Purchaser purchaser = getPurchaser(request.getPurchaserId());
-        ordersDomainService.finish(OrderId.of(request.getOrderId()), purchaser);
+        ordersDomainService.finish(OrderId.of(orderId), purchaser);
     }
 
     private ProductContext getProductContext(String id) {
