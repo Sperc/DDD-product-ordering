@@ -22,7 +22,7 @@ public class OrderApplicationService {
     }
 
     public void addProduct(AddProductRequest request) {
-        final ProductContext productContext = getProductContext(request);
+        final ProductContext productContext = getProductContext(request.getProductId());
         final Purchaser purchaser = getPurchaser(request.getPurchaserId());
         ordersDomainService.addProduct(new AddProductCommand(OrderId.of(request.getOrderId()), productContext, purchaser));
     }
@@ -48,11 +48,11 @@ public class OrderApplicationService {
         ordersDomainService.finish(OrderId.of(request.getOrderId()), purchaser);
     }
 
-    private ProductContext getProductContext(AddProductRequest request) {
-        return productSupplier.supply(request.getPurchaserId())
+    private ProductContext getProductContext(String id) {
+        return productSupplier.supply(id)
                               .orElseThrow(() -> new ApplicationException(ApplicationError.PRODUCT_NOT_FOUND,
                                                                           String.format("Product: %s not found",
-                                                                                        request.getProductId())));
+                                                                                        id)));
     }
 
     private Purchaser getPurchaser(String purchaserId) {

@@ -9,6 +9,6 @@ public class PremiumUserDiscount implements DiscountStrategy {
 
     @Override
     public boolean isApplicable(Purchaser purchaser) {
-        return false;
+        return Purchaser.Type.PREMIUM == purchaser.getType();
     }
 }

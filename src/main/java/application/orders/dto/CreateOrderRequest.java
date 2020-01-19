@@ -7,8 +7,6 @@ import lombok.Value;
 @Value
 public class CreateOrderRequest {
     private final String purchaserId;
-    private final String email;
-    private final String type;
 
     public CreateOrderCommand toCommand(Purchaser purchaser) {
         return new CreateOrderCommand(purchaser);

@@ -10,16 +10,19 @@ import java.util.Map;
 public class OrderModuleConfiguration {
 
     public OrderApplicationService orderApplicationService() {
+        final OrderNotificationImpl orderNotification = new OrderNotificationImpl();
+        final UuidGenerator uuidGenerator = new UuidGenerator();
+        final Clock clock = Clock.systemDefaultZone();
         return new OrderApplicationService(orderDomainService(orderRepository(),
-                                                              new OrderNotificationImpl(),
-                                                              new UuidGenerator(),
-                                                              Clock.systemDefaultZone()),
+                                                              orderNotification,
+                                                              uuidGenerator,
+                                                              clock),
                                            getPurchaserSupplier(),
                                            getProductSupplier());
     }
 
     public OrderApplicationService OrderApplicationServiceForTest(OrderRepository orderRepository,
-                                                                  OrderNotificationImpl orderNotification,
+                                                                  OrderNotification orderNotification,
                                                                   UuidGenerator uuidGenerator,
                                                                   Clock clock,
                                                                   PurchaserSupplier purchaserSupplier,
@@ -30,14 +33,19 @@ public class OrderModuleConfiguration {
     }
 
     public OrdersDomainService orderDomainService(OrderRepository orderRepository,
-                                                  OrderNotificationImpl orderNotification,
+                                                  OrderNotification orderNotification,
                                                   UuidGenerator uuidGenerator,
                                                   Clock clock) {
+        final OrderFactory orderFactory = orderFactory(orderNotification, uuidGenerator, clock);
         return new OrdersDomainService(orderRepository,
-                                       orderFactory(orderNotification, uuidGenerator, clock));
+                                       orderFactory);
     }
 
-    private OrderFactory orderFactory(OrderNotificationImpl orderNotification, UuidGenerator uuidGenerator, Clock clock) {
+    private OrderRepository orderRepository() {
+        return new OrderRepositoryImpl();
+    }
+
+    private OrderFactory orderFactory(OrderNotification orderNotification, UuidGenerator uuidGenerator, Clock clock) {
         return new OrderFactory(clock,
                                 uuidGenerator,
                                 orderNotification,
@@ -67,9 +75,5 @@ public class OrderModuleConfiguration {
     private DiscountStrategyFactory getDiscountStrategyFactory() {
         return new DiscountStrategyFactory(List.of(new PremiumUserDiscount(),
                                                    new OrdinaryUserDiscount()));
-    }
-
-    private OrderRepository orderRepository() {
-        return new OrderRepositoryImpl();
     }
 }

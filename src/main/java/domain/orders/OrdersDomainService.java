@@ -19,23 +19,27 @@ public class OrdersDomainService {
     public AddProductResult addProduct(AddProductCommand command) {
         final Order order = getOrder(command.getOrderId(), command.getPurchaser());
         order.addProduct(command.getProduct());
+        orderRepository.save(order);
         return new AddProductResult(order.getId());
     }
 
     public AddDeliveryAddressResult addDeliveryAddress(AddDeliveryInformationCommand command) {
         final Order order = getOrder(command.getOrderId(), command.getPurchaser());
         order.addDeliveryInformation(command);
+        orderRepository.save(order);
         return new AddDeliveryAddressResult(order.getId());
     }
 
     public void calculateDiscount(CalculateDiscountCommand command) {
         final Order order = getOrder(command.getOrderId(), command.getPurchaser());
         order.calculateDiscount(command.getDiscountCode());
+        orderRepository.save(order);
     }
 
     public void finish(OrderId orderId, Purchaser purchaser) {
         final Order order = getOrder(orderId, purchaser);
         order.finish();
+        orderRepository.save(order);
     }
 
     private Order getOrder(OrderId orderId, Purchaser purchaser) {

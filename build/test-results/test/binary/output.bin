@@ -1,0 +1,3 @@
+X17:18:16.968 [Test worker] INFO  domain.orders.OrdinaryUserDiscount - Ordinary discount
+Q17:18:16.974 [Test worker] INFO  domain.orders.Order - Price after discount: 100
+P17:18:16.977 [Test worker] INFO  domain.orders.Order - Price after discount: 80

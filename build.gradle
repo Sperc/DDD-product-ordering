@@ -5,18 +5,24 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 
 repositories {
     mavenCentral()
 }
 
+apply plugin: 'groovy'
+
+
 dependencies {
     testCompile(
             'junit:junit:4.12',
-            'org.codehaus.groovy:groovy-all:2.4.11',
-            'org.spockframework:spock-core:1.1-groovy-2.4'
+            'org.codehaus.groovy:groovy-all:2.4.4',
+            'org.spockframework:spock-core:1.0-groovy-2.4'
     )
+    compile 'org.objenesis:objenesis:1.4'
+    compile "cglib:cglib:2.2"
     compileOnly 'org.projectlombok:lombok:1.18.10'
     annotationProcessor 'org.projectlombok:lombok:1.18.10'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.2'
