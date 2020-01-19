@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f367ee9-6cae-449a-873a-bbf494478b34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/application/orders/OrderApplicationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/application/orders/OrderApplicationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/application/orders/dto/AddDeliveryAddressRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/application/orders/dto/AddDeliveryAddressRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/application/orders/dto/AddProductRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/application/orders/dto/AddProductRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/application/orders/dto/CalculateDiscountRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/application/orders/dto/CalculateDiscountRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/application/orders/dto/CompleteOrderProcessRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/application/orders/dto/CompleteOrderProcessRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/orders/OrderApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/orders/OrderApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/orders/dto/AddDeliveryAddressRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/AddDeliveryAddressRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/orders/dto/AddProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/AddProductRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/orders/dto/CalculateDiscountRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/CalculateDiscountRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/orders/dto/CompleteOrderProcessRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/CompleteOrderProcessRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/application/orders/OrderApplicationServiceTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/application/orders/OrderApplicationServiceTest.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +136,7 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.OrderProcessing [clean test]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.Main" />
       <module name="OrderProccessing.main" />
@@ -207,22 +185,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderApplicationServiceTest.AddDeliveryAddress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OrderProccessing.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="application.orders.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="application.orders" />
-      <option name="MAIN_CLASS_NAME" value="application.orders.OrderApplicationServiceTest" />
-      <option name="METHOD_NAME" value="AddDeliveryAddress" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OrderApplicationServiceTest.CompleteOrderProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OrderProccessing.test" />
       <extension name="coverage">
@@ -239,13 +201,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderApplicationServiceTest.should throw exception when try to add Product to Order with not exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OrderProccessing.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.orders.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="application.orders" />
+      <option name="MAIN_CLASS_NAME" value="application.orders.OrderApplicationServiceTest" />
+      <option name="METHOD_NAME" value="should throw exception when try to add Product to Order with not exists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderApplicationServiceTest.should throw exception when try to add Product to Order with not exists" />
+        <item itemvalue="JUnit.OrderApplicationServiceTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.OrderProcessing [clean test]" />
         <item itemvalue="JUnit.OrderApplicationServiceTest.CompleteOrderProcess" />
-        <item itemvalue="JUnit.OrderApplicationServiceTest" />
-        <item itemvalue="JUnit.OrderApplicationServiceTest.AddDeliveryAddress" />
       </list>
     </recent_temporary>
   </component>
@@ -260,6 +238,7 @@
         </serviceView>
       </list>
     </option>
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -273,7 +252,7 @@
       <updated>1579341627623</updated>
       <workItem from="1579341629036" duration="26966000" />
       <workItem from="1579441002041" duration="161000" />
-      <workItem from="1579441187352" duration="14555000" />
+      <workItem from="1579441187352" duration="14807000" />
     </task>
     <servers />
   </component>
@@ -321,22 +300,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="311" y="139" key="CommitChangelistDialog2/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579456798246" />
-    <state width="1638" height="367" key="GridCell.Tab.0.bottom" timestamp="1579456803280">
+    <state width="1638" height="367" key="GridCell.Tab.0.bottom" timestamp="1579457037233">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="367" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579456803280" />
-    <state width="1638" height="367" key="GridCell.Tab.0.center" timestamp="1579456803279">
+    <state width="1638" height="367" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579457037233" />
+    <state width="1638" height="367" key="GridCell.Tab.0.center" timestamp="1579457037232">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="367" key="GridCell.Tab.0.center/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579456803279" />
-    <state width="1638" height="367" key="GridCell.Tab.0.left" timestamp="1579456803278">
+    <state width="1638" height="367" key="GridCell.Tab.0.center/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579457037232" />
+    <state width="1638" height="367" key="GridCell.Tab.0.left" timestamp="1579457037231">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="367" key="GridCell.Tab.0.left/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579456803278" />
-    <state width="1638" height="367" key="GridCell.Tab.0.right" timestamp="1579456803279">
+    <state width="1638" height="367" key="GridCell.Tab.0.left/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579457037231" />
+    <state width="1638" height="367" key="GridCell.Tab.0.right" timestamp="1579457037232">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="367" key="GridCell.Tab.0.right/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579456803279" />
+    <state width="1638" height="367" key="GridCell.Tab.0.right/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579457037232" />
     <state width="1638" height="401" key="GridCell.Tab.1.bottom" timestamp="1579456732059">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -393,10 +372,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="546" y="159" key="refactoring.ChangeSignatureDialog/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579445026057" />
-    <state x="505" y="248" width="670" height="675" key="run.anything.popup" timestamp="1579450692684">
+    <state x="505" y="248" width="670" height="675" key="run.anything.popup" timestamp="1579457035567">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579450692684" />
+    <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579457035567" />
     <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1579456498712">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
