@@ -1,4 +1,4 @@
-package domain.orders;
+package domain.shared;
 
 public enum ErrorStatus {
     PRODUCT_NOT_AVAILABLE,

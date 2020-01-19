@@ -1,6 +1,7 @@
 package domain.orders;
 
 import domain.orders.dto.*;
+import domain.shared.ErrorStatus;
 import domain.shared.OrderException;
 import lombok.RequiredArgsConstructor;
 
@@ -9,30 +10,30 @@ public class OrdersDomainService {
     private final OrderRepository orderRepository;
     private final OrderFactory orderFactory;
 
-    CreateOrderResult createOrder(CreateOrderCommand command) {
+    public CreateOrderResult createOrder(CreateOrderCommand command) {
         final Order order = orderFactory.createOrder(command.getPurchaser());
         orderRepository.save(order);
         return CreateOrderResult.of(order.getId().getValue());
     }
 
-    AddProductResult addProduct(AddProductCommand command) {
+    public AddProductResult addProduct(AddProductCommand command) {
         final Order order = getOrder(command.getOrderId(), command.getPurchaser());
         order.addProduct(command.getProduct());
         return new AddProductResult(order.getId());
     }
 
-    AddDeliveryAddressResult addDeliveryAddress(AddDeliveryInformation command) {
+    public AddDeliveryAddressResult addDeliveryAddress(AddDeliveryInformationCommand command) {
         final Order order = getOrder(command.getOrderId(), command.getPurchaser());
         order.addDeliveryInformation(command);
         return new AddDeliveryAddressResult(order.getId());
     }
 
-    void calculateDiscount(CalculateDiscountCommand command) {
+    public void calculateDiscount(CalculateDiscountCommand command) {
         final Order order = getOrder(command.getOrderId(), command.getPurchaser());
         order.calculateDiscount(command.getDiscountCode());
     }
 
-    void finish(OrderId orderId, Purchaser purchaser) {
+    public void finish(OrderId orderId, Purchaser purchaser) {
         final Order order = getOrder(orderId, purchaser);
         order.finish();
     }

@@ -10,4 +10,7 @@ class WithoutVerificationProductStrategy implements ProductAvailablePolicy {
         //this strategy returns always true
         return true;
     }
+
+    public static class PremiumUserDiscount {
+    }
 }

@@ -1,5 +1,6 @@
 package domain.orders;
 
+import domain.shared.ErrorStatus;
 import domain.shared.OrderException;
 import lombok.RequiredArgsConstructor;
 

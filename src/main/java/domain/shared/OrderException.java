@@ -1,6 +1,5 @@
 package domain.shared;
 
-import domain.orders.ErrorStatus;
 import lombok.Value;
 
 @Value

@@ -1,5 +1,6 @@
 package domain.orders;
 
+import domain.shared.ErrorStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -44,13 +45,13 @@ public class Order {
         return this;
     }
 
-    public Order addDeliveryInformation(AddDeliveryInformation command) {
+    public Order addDeliveryInformation(AddDeliveryInformationCommand command) {
         this.deliveryInformation = command.getDeliveryInformation();
         return this;
     }
 
     public void calculateDiscount(DiscountCode discountCode) {
-        final Long priceAfterDiscount = discountStrategy.calculateDiscount(this.getId(), purchaser, discountCode);
+        final Long priceAfterDiscount = discountStrategy.calculateDiscount(this, discountCode);
         log.info("Price after discount: {}", priceAfterDiscount);
         this.orderPrice = priceAfterDiscount;
     }

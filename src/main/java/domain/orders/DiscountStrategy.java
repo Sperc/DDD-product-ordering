@@ -1,7 +1,7 @@
 package domain.orders;
 
 public interface DiscountStrategy {
-    Long calculateDiscount(OrderId orderId, Purchaser purchaser, DiscountCode discountCode);
+    Long calculateDiscount(Order order, DiscountCode discountCode);
 
     boolean isApplicable(Purchaser purchaser);
 }

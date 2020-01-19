@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f367ee9-6cae-449a-873a-bbf494478b34" name="Default Changelist" comment="" />
+    <list default="true" id="3f367ee9-6cae-449a-873a-bbf494478b34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/OrderApplicationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/OrderModuleConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/OrderNotificationImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/OrderRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/ProductContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/ProductMockSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/ProductSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/PurchaserMockSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/PurchaserSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/AddDeliveryAddressRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/AddProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/CalculateDiscountRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/CompleteOrderProcessRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/CreateOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/orders/dto/CreateOrderResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/shared/ApplicationError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/shared/ApplicationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/orders/OrdinaryUserDiscount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/orders/PremiumUserDiscount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/AddDeliveryInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/AddDeliveryInformationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/DiscountCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/DiscountCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/DiscountStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/DiscountStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/DiscountStrategyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/DiscountStrategyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/ErrorStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/shared/ErrorStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/OrderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/OrderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/OrderId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/OrderId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/OrdersDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/OrdersDomainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/ProductException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/ProductException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/ProductId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/ProductId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/PurchaserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/PurchaserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/orders/WithoutVerificationProductStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/orders/WithoutVerificationProductStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/shared/OrderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/shared/OrderException.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,10 +106,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1WZ05iRTlMbXMv6aGI9GJfrdfnx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -82,8 +123,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -99,6 +142,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="application.orders" />
       <recent name="domain.orders" />
     </key>
   </component>
@@ -163,7 +207,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579341627623</updated>
-      <workItem from="1579341629036" duration="15070000" />
+      <workItem from="1579341629036" duration="24109000" />
     </task>
     <servers />
   </component>
@@ -175,61 +219,73 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="440" y="202" width="811" height="669" key="#Project_Structure/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579343386573" />
-    <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1579359936364">
+    <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1579433882927">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579359936364" />
+    <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579433882927" />
+    <state x="606" y="403" width="467" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1579363166460">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="606" y="403" width="467" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579363166460" />
     <state x="0" y="23" width="496" height="1027" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579359960376">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="0" y="23" width="496" height="1027" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579359960376" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1579343452294">
+    <state x="517" y="257" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1579434071785">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579343452294" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1579343452293">
+    <state x="517" y="257" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579434071785" />
+    <state width="1638" height="191" key="GridCell.Tab.0.bottom" timestamp="1579362037497">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579343452293" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1579343452293">
+    <state width="1638" height="191" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579362037497" />
+    <state width="1638" height="191" key="GridCell.Tab.0.center" timestamp="1579362037496">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579343452293" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1579343452294">
+    <state width="1638" height="191" key="GridCell.Tab.0.center/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579362037496" />
+    <state width="1638" height="191" key="GridCell.Tab.0.left" timestamp="1579362037495">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579343452294" />
-    <state x="641" y="461" key="ReplaceDuplicatesPrompt" timestamp="1579354163275">
+    <state width="1638" height="191" key="GridCell.Tab.0.left/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579362037495" />
+    <state width="1638" height="191" key="GridCell.Tab.0.right" timestamp="1579362037497">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="641" y="461" key="ReplaceDuplicatesPrompt/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579354163275" />
-    <state x="328" y="118" key="SettingsEditor" timestamp="1579341705473">
+    <state width="1638" height="191" key="GridCell.Tab.0.right/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579362037497" />
+    <state x="641" y="461" key="ReplaceDuplicatesPrompt" timestamp="1579435605666">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="328" y="118" key="SettingsEditor/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579341705473" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1579360234121">
+    <state x="641" y="461" key="ReplaceDuplicatesPrompt/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579435605666" />
+    <state x="328" y="118" key="SettingsEditor" timestamp="1579363977696">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579360234121" />
-    <state x="578" y="296" width="542" height="484" key="extract.method.dialog" timestamp="1579358647086">
+    <state x="328" y="118" key="SettingsEditor/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579363977696" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1579366333231">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="578" y="296" width="542" height="484" key="extract.method.dialog/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579358647086" />
+    <state width="500" height="445" key="SwitcherDM/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579366333231" />
+    <state x="623" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579437086221">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="623" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579437086221" />
+    <state x="578" y="296" width="542" height="484" key="extract.method.dialog" timestamp="1579436811441">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="578" y="296" width="542" height="484" key="extract.method.dialog/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579436811441" />
     <state x="217" y="150" key="new project wizard" timestamp="1579346332758">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="217" y="150" key="new project wizard/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579346332758" />
-    <state x="546" y="159" key="refactoring.ChangeSignatureDialog" timestamp="1579358349337">
+    <state x="546" y="159" key="refactoring.ChangeSignatureDialog" timestamp="1579437510063">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="546" y="159" key="refactoring.ChangeSignatureDialog/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579358349337" />
+    <state x="546" y="159" key="refactoring.ChangeSignatureDialog/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579437510063" />
     <state x="505" y="248" width="670" height="675" key="run.anything.popup" timestamp="1579343422677">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579343422677" />
-    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1579360386474">
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1579437577352">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579360386474" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1579437577352" />
   </component>
 </project>

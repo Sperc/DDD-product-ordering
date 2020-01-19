@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class OrderFactory {
     private final Clock clock;
     private final UuidGenerator uuidGenerator;
-    private final ProductAvailablePolicy productAvailablePolicy;
     private final OrderNotification orderNotification;
     private final DiscountStrategyFactory discountStrategyFactory;
 
@@ -20,7 +19,7 @@ public class OrderFactory {
         final OrderId id = OrderId.of(uuidGenerator.generateUuid());
         return new Order(id,
                          ZonedDateTime.now(clock),
-                         productAvailablePolicy,
+                         new WithoutVerificationProductStrategy(),
                          orderNotification,
                          strategy,
                          DeliveryInformation.createEmpty(),
