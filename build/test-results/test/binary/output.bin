@@ -1,3 +1,0 @@
-X19:03:46.654 [Test worker] INFO  domain.orders.OrdinaryUserDiscount - Ordinary discount
-Q19:03:46.659 [Test worker] INFO  domain.orders.Order - Price after discount: 100
-P19:03:46.662 [Test worker] INFO  domain.orders.Order - Price after discount: 80
